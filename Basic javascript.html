@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JAVASCRIPT BASIC & DOM</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+    
+    </style>
+</head>
+<body class="container">
+     <!-- question  1 -->
+     <li>What is javascript?</li>
+     <p> javascript is a high-level , object-oriented , multi-paradiam , programming language.</p>
+
+     <!-- question  2 -->
+
+     <li> What is the use of isNaN function?</li> 
+     <p>NaN stands for Not a Number, It represents a value that is not a valid number, It can be used to check whether a number entered 
+         is a valid number or not a number. To assign a variable to NaN value.
+         for ex:
+         var a="Dhara";
+         if(isNaN(a)){
+             console.log("this is not number");
+         }else{
+             console.log("this is a number");
+         }
+
+     </p>
+     <!-- question  3 -->
+
+     <li> What is negative Infinity?</li>
+     <p>
+         The negative infinity is a constant value that is used to represent a value that is the lowest available. This means that no other number is 
+         lesser than this value. It can be generated using a self-made function or by an arithmetic operation. 
+         for ex: let a=-48;
+         console.log(a);
+         console.log(a.NEGATIVE_INFINITY);
+     </p>
+     
+      <!-- question  4 -->
+     
+     <li>which Company Dovloped javascript?</li>
+     <p>JavaScript language developed by Netscape.</p>
+
+      <!-- question  5 -->
+
+     <li> What are undeclared and undefined variables?</li>
+     <p>
+         Undefined: It occurs when a variable has been declared but has not been assigned any value. Undefined is not a keyword. 
+         Undeclared: It occurs when we try to access any variable that is not initialized or declared earlier using the var or const keyword. 
+     </p>
+
+     <!-- question  6 -->
+     <li> Write the code for adding new elements dynamically? </li>
+     <p>
+         let a = document.createElement("h1");
+         document.body.append(a);
+         a.innerText="hello heading1";
+         console.log(a);          
+     </p>
+     <!-- question  7 -->
+
+     <li>What is the difference between ViewState and SessionState?</li>
+     <p>
+         ViewState: A ViewState is a state of a page within a browser wherein the values of controls persist when post back 
+         operation is done.When another page is loaded, the previous page data is no longer available.Information that is gathered in view
+         state is stored for the clients only and cannot be transferred to any other place. View state is synonymous with serializable data only.
+
+         SessionState:  SessionState is the data of a user session and is maintained on the server side. This data available
+         until user closes the browser or session time-outs.The information is stored within the server and can be accessed by any person that
+         has access to the server where the information is stored.
+     </p>
+     
+     <!--  question  8  -->
+
+     <li> What is === operator?</li>
+     <p>
+         (===)this is a strict equality operator in javascript, it checkes wether two operands are equal if they are then it will return a
+         boolean value true or if they are not then it will return false. it's checkes operands data types also thats why it is called strict
+         equality operator.
+         for ex: let a= 21;
+                 let b= "21";
+                 console.log(a===b);
+                 output will be false
+
+                 let b= 21;
+                 console.log(a===b);
+                 output will be true
+      </p>
+
+      <!--  question  8  -->
+
+      <li>How can the style/class of an element be changed?</li>
+     <p>
+         using style property we can change css dynamically.
+         for ex:
+         let li = document.getElementById('li2');
+         console.log(li);
+         li.innerText="grapes";
+         li.style.color="teal";
+         li.style.fontFamily="san-sarif";
+         li.style.background="wheat";
+     </p>
+
+     <!-- question  9 -->
+
+     <li> How to read and write a file using JavaScript?</li>
+     <p> first we have to use node module fs which is File System module we have to store that in to a veriable like const fs = require("fs"). then fs.readFile() method is used  to read file from our computer and fs.writeFile() method is used to write content into the file.
+     </p>
+
+      <!-- question  10 -->
+      <li> What are all the looping structures in JavaScript?</li>
+      <p> Main 6 types of loops in javascript 
+        for statement, do...while statement, while statement, switch statement, for...in statement, for...of statement
+      </p>
+       <!-- question  11 -->
+       <li> How can you convert the string of any base to an integer in JavaScript?</li>
+       <p> A function name parseInt() we can use to convaert a string in to a integer to any base.let str = "25.12";
+        let num = parseInt(str);
+        console.log(num);  o/p = 25
+     </p>
+
+     <!-- question  12 -->
+     <li>What is the function of the delete operator?</li>
+     <p> a delete operater is a delete() method which is used to delete any property from the object.</p>
+
+    <!-- question  13 -->
+    <li>What are all the types of Pop up boxes available in JavaScript?</li>
+    <p> in JavaScript there are three types of pop-up boxes which are Alert Box, Confirm Box and Prompt Box.</p>
+
+    <!-- question  14 -->
+    <li>What is the use of Void (0)?</li>
+    0 is an argument passed to void that does nothing, and returns nothing and 
+    using void(0) means, don't run any code or don't reload or don't navigate.
+
+    <!-- question 15 -->
+    <li>How can a page be forced to load another page in JavaScript?</li>
+    <p>using Window.Location property we can forcefully load another apge in same window.
+    there are so many location properties also using we ca do many things like location.reload(),location.hostname() , location.pathName(), etc.... </p>
+
+    <!-- question 16 -->
+    <li>What are the disadvantages of using innerHTML in JavaScript?</li>
+    <p>there is two main reason to avoid innerHTML is (1) it performance is very low at the load time (2) It can brack the security of our code.</p>
+
+    <!-- question 17 -->
+    <li>Create password field with show hide functionalities</li>
+    <div>
+    <input type="password" value="" class="in ">
+    <i class="fa-solid fa-eye i my-1"></i>
+    </div>
+
+    <!-- question 18 -->
+    <li>create basic math operation using javascript</li>
+    <div class="container w-75  my-5 border border-success ps-5">
+        <div class="row ">
+            <h4 class="text-success text-center">Math Operation</h4>
+        </div>
+        <div class="row  my-3">
+        <label for="Enter First Number" class="col-5">Enter First Number:</label>
+        <input type="number" class="fNum col-5" size="10" > <br>
+        </div>
+        <div class="row  my-3">
+        <label for="Enter First Number"  class="col-5">Enter Second Number:</label>
+        <input type="number" class="sNum col-5" size="10" >
+        </div>
+
+        <div class="row py-3 ">
+          <div class="row col-6">
+            <button class="btn btn-success col mx-1 plus">+</button>
+            <button class="btn btn-warning col mx-1 minus">-</button>
+            <button class="btn btn-info col mx-1 multiply">*</button>
+            <button class="btn btn-secondary col mx-1 divide">/</button>
+            <button class="btn btn-danger col mx-1 remainder">%</button>
+          </div>
+          <div class="col-5 my-3">
+            <div class="row">
+                <h5 class="text-success col">Answer:</h5>
+                <input type="number" size="10" class=" col border border-success answer">
+                <button class="btn btn-dark mx-3 clear col">Clear</button>
+            </div>
+            </div>
+        </div>      
+    </div>
+
+    <!-- question 19.   Create result------  -->
+    <li> Create result</li>
+    <div  class="container w-75  my-5 border border-success ps-5">
+        <div class="row ">
+            <h4 class="text-success text-center">MarkSheet Of Information Technology</h4>
+        </div>
+        <div class="inCon">
+            <div class="row  my-3">
+                <label for="html" class="col-5">1.HTML</label>
+                <input type="number" class="html col-5 marks" size="10"> <br>
+               
+            </div>
+            <div class="row  my-3">
+                <label for="css" class="col-5">2. Css</label>
+                <input type="number" class="css col-5 marks" size="10" > <br>
+            
+            </div>
+            <div class="row  my-3">
+                <label for="javascript" class="col-5">3. JavaScript</label>
+                <input type="number" class="jvs col-5 marks" size="10" > <br>
+            </div>
+            <div class="row  my-3">
+                <label for="jquery" class="col-5">4. jquery </label>
+                <input type="number" class="jquery col-5 marks" size="10" > <br>
+            </div>
+            <div class="row  my-3">
+                <label for="bootstrap" class="col-5">5. Bootstrap</label>
+                <input type="number" class="bootstrap col-5 marks" size="10" > <br>
+                
+            </div>
+            <div class="row  my-3">
+                <label for="react" class="col-5">6. React</label>
+                <input type="number" class="react col-5 marks" size="10" > <br>
+            </div>
+            <div class="row  my-3">
+                <label for="Redux" class="col-5">7. Redux </label>
+                <input type="number" class="redux col-5 marks" size="10" > <br>
+            </div>
+            <div class="row  my-3">
+                <label for="node" class="col-5">8. Node.js </label>
+                <input type="number" class="node col-5 marks" size="10" > <br>
+            </div>
+
+            <p class="error text-danger"></p>
+
+            <div class="row  my-3">
+                <button class="btn btn-lg btn-info justify-content-center col-3 result">RESULT</button>
+                <div class="col-6">
+                    <div class="row">
+                    <p class="col-4 mx-3">Total Marks :<span class="allMarks "> </span></p>
+                    <p class="col-4 mx-3">Percentage : <span class="percentege"> </span></p>     
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+ </ol>
+    
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="basicJavascript.js"></script>
+</body>
+</html>
