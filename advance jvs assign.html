@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>advamce javascript assignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <p> (1) write a program to show an alert </p>
+        <p>ANS. alert("this is an alert"); </p>
+        <pre> (2) What will be the result for these expressions?
+            1. 5 > 4                            //true
+            2. "apple" > "pineapple"            //false
+            3. "2" > "12"                       //true
+            4. undefined == null                //true
+            5. undefined === null               //false
+            6. null == "\n0\n"                  //false
+            7. null === +"\n0\n"                //false
+        </pre> 
+        <pre>(3) Will alert be shown?
+            if ("0") { alert( 'Hello'); }</pre>
+       <pre> ANS. yes. alert will be shown</pre>
+
+       <pre>(4).What is the code below going to output? alert( null || 2 || undefined )</pre>
+       <pre>ANS. Alert display for  2 because it is truthy value and others are falsy value</pre>
+
+       <pre>(5).The following function returns true if the parameter age is greater than Otherwise it asks for a confirmation and returns its result:
+        function checkAge(age){
+        if (age> 18) { return true; }
+        else { 
+            ...return confirm ('did parents allow you?')
+            }
+        }</pre>
+        <pre>ANS. when we call the function and give it any argument the function wil check the argument is satisfy the condition or not if yes 
+        then it will give appropriate alert.
+        </pre>
+
+        <pre>(6) Replace Function Expressions with arrow functions in the code below:
+            function
+            ask(question, yes, no){ 
+                if (confirm(question))yes();
+                else no();
+                }</pre>
+
+        <pre>ANS . let assk = (question,yes,no)=>{ if (confirm(question))yes();
+            else no();}</pre> 
+            
+        <pre>(7).● Write the code, one line for each action:
+            a) Create an empty object user.
+            // let obj = {};
+            b) Add the property name with the value John.
+            // obj.name="John";
+            c) Add the property surname with the value Smith.
+            // obj.surname="smith";
+            d) Change the value of the name to Pete.
+            // obj.name = "pete";
+            e) Remove the property name from the object.
+            // delete obj.name;
+        </pre>
+
+        <pre>(8) ● Is array copied?
+            let fruits = ["Apples", "Pear", "Orange"]; // push a new value into the "copy" let
+            shoppingCart = fruits; shoppingCart.push("Banana"); // what's in fruits?
+            alert( fruits.length ); // ?
+        Ans. yes array is copied after adding new fruit in copy array its also same in original array.
+        </pre>
+        <pre>(9). Map to names
+            let john = { name: "John", age: 25 };
+            let pete = { name: "Pete", age: 30 };
+            let mary ={ name: "Mary", age: 28 }; 
+            let users = [ john, pete, mary ]; 
+           
+            Ans . let names =users.map(ele=>ele.name);
+            alert( names ); // John, Pete, Mary
+        </pre>
+
+        <pre>(10) Map to objects
+            let john = { name: "John", surname: "Smith", id: 1 }; 
+            let pete = { name: "Pete",surname: "Hunt", id: 2 }; 
+            let mary = { name: "Mary", surname: "Key", id: 3 }; 
+            let users = [ john, pete, mary ]; 
+            Ans. let usersMapped = users.map(ele=>{
+                return({
+                fullName : `${ele.name + ele.surname}`,
+                id: ele.id
+            })
+            });
+            console.log(usersMapped);
+            (3) [{…}, {…}, {…}]
+            0:{fullName: 'JohnSmith', id: 1}
+            1:{fullName: 'PeteHunt', id: 2}
+            2:{fullName: 'MaryKey', id: 3}
+
+        </pre>
+        <pre>(11)Sum the properties There is a salaries object with arbitrary number of salaries. Write the function sumSalaries(salaries) that returns the sum of all salaries using Object.values and the for..of loop.If salaries is empty, then the result must be 0.
+            let salaries = {
+            "John": 100,
+            "Pete": 300,
+            "Mary": 250,
+            "Dhara":500
+            };
+            let sumSalaries = function(sal){
+                 let salary= 0;
+                for(let s  of Object.values(sal) ){
+                    salary += s;
+                }
+                console.log(salary);
+            }
+             sumSalaries(salaries) //1150
+        </pre>
+
+        <pre>(12) Destructuring assignment We have an object: Write the Destructuring assignment that
+            reads:
+            let user = { name: "John", years: 30}; 
+            // a) Name property into the variable name.
+            let {name} = user;
+            console.log(name); //john
+            // b) Year’s property into the variable age.
+            let {years:age} = user;
+            console.log(age);   //30
+            // c) isAdmin property into the variable isAdmin (false, if no such property)
+            let {isAdmin}=user;
+            console.log(isAdmin); // undefined
+        </pre>
+        <pre>(13) Turn the object into JSON and back Turn the user into JSON and then read it back
+            into another variable.
+            user = { name: "John Smith", age: 35}
+            let user2 = JSON.parse(JSON.stringify(user));
+        </pre>
+
+    
+    </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script>
+    // write a program to show an alert
+    // alert("this is an alert");
+
+    // (2) What will be the result for these expressions?
+     console.log(5>4);
+     console.log("apple">"pineapple");
+     console.log("2" > "12");
+     console.log(undefined == null);
+     console.log(undefined === null);
+     console.log( null == "\n0\n");
+     console.log(null === +"\n0\n" );
+
+     // (3) Will alert be shown?
+    // if ("0") { alert( 'Hello'); } yess  
+
+    //(4) What is the code below going to output?
+    //  alert( null || 2 || undefined )
+
+    //(5) 
+
+    // function checkAge(age){
+    //     if (age > 18) { return true; }
+    //     else { 
+    //          return confirm ('did parents allow you?');
+    //         }
+    //     }
+    //     console.log(checkAge(2));
+
+
+
+    // Replace Function Expressions with arrow functions in the code below:
+// function
+// ask(question, yes, no){ 
+//     if (confirm(question))yes();
+//     else no();
+//     }
+// ask("Do you agree?", function()
+// { alert("You agreed.") 
+// },function(){alert("You canceled the execution.")})
+
+let assk = (question,yes,no)=>{ if (confirm(question))yes();
+    else no();}
+
+// assk("Do you agree?", function()
+// { alert("You agreed.") 
+// },function(){alert("You canceled the execution.")})
+
+//(7) ● Write the code, one line for each action:
+
+// a) Create an empty object user.
+let obj = {};
+console.log(obj);
+// b) Add the property name with the value John.
+obj.name="John";
+console.log(obj);
+// c) Add the property surname with the value Smith.
+obj.surname="Smith";
+console.log(obj);
+// d) Change the value of the name to Pete.
+obj.name = "pete";
+console.log(obj);
+// e) Remove the property name from the object.
+delete obj.name;
+console.log(obj);
+
+//(8)  ● Is array copied?
+let fruits = ["Apples", "Pear", "Orange"];  // push a new value into the "copy" let
+shoppingCart = fruits; 
+shoppingCart.push("Banana");  // what's in fruits?
+console.log( fruits.length ); // ?
+
+//(9) Map to names
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary ={ name: "Mary", age: 28 }; 
+// let users = [ john, pete, mary ]; 
+// let names =users.map(ele=>ele.name);
+// console.log( names ); // John, Pete, Mary
+
+//(10) Map to objects
+let john = { name: "John", surname: "Smith", id: 1 }; 
+let pete = { name: "Pete",surname: "Hunt", id: 2 }; 
+let mary = { name: "Mary", surname: "Key", id: 3 }; 
+let users = [ john, pete, mary ]; 
+let usersMapped = users.map(ele=>{
+    return({
+    fullName : `${ele.name + ele.surname}`,
+    id: ele.id
+})
+});
+console.log(usersMapped);
+
+// (11)Sum the properties There is a salaries object with arbitrary number of salaries. Write the function sumSalaries(salaries) that returns the sum of all salaries using Object.values and the for..of loop.If salaries is empty, then the result must be 0.
+let salaries = {
+"John": 100,
+"Pete": 300,
+"Mary": 250,
+"Dhara":500
+};
+let sumSalaries = function(sal){
+     let salary= 0;
+    for(let s  of Object.values(sal) ){
+        salary += s;
+    }
+    console.log(salary);
+}
+ sumSalaries(salaries);
+
+//(12) Destructuring assignment We have an object: Write the Destructuring assignment that reads:
+let user = { name: "John", years: 30}; 
+// a) Name property into the variable name.
+let {name} = user;
+console.log(name);
+// b) Year’s property into the variable age.
+let {years:age} = user;
+console.log(age);
+// c) isAdmin property into the variable isAdmin (false, if no such property)
+let {isAdmin}=user;
+console.log(isAdmin); // undefined
+// d)
+</script>
+</html>
